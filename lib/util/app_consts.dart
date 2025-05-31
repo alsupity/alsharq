@@ -5,6 +5,7 @@ class AppConsts {
   static const String baseUrl = "https://sharq.afkarsoft.xyz";
   // static const String baseUrl = "http://172.16.4.249";
   static const String storageUrl = "/storage";
+  static const String reserveCouponUrl = "/api/coupons/reserve/";
 
   static const String serverToken = "AAAAxI7JdhA:APA91bHwUcmS3U40QQ1ZHW1zabKEs0XZ4apekaN0vv6LLYjlMjje0zdIizJlfZxnPo2J-BQffRY_L3wvgxFnUwHKq1J3jjtmbOhlS6_5jsLZ9W3io1fG8GCT6SvJkoCFjhftPULsqi5l";
   static const String subscribeFCM = "subscribe";
