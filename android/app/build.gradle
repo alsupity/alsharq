@@ -6,6 +6,7 @@ plugins {
 }
 
 android {
+    namespace 'com.example.alsharq'
     namespace = "com.madars.alsharq"
     compileSdk = 35
     ndkVersion = "28.0.12674087"
@@ -26,8 +27,11 @@ android {
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = 23
         targetSdk = 35
-        versionCode = flutter.versionCode
-        versionName = flutter.versionName
+        versionCode = 1
+        versionName = 1.0
+        
+        // Configuración para dispositivos modernos
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -37,6 +41,16 @@ android {
             signingConfig = signingConfigs.debug
         }
     }
+    
+    // Configuración para pantallas modernas
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    // Soporte para multidex (necesario para dispositivos modernos)
+    implementation 'androidx.multidex:multidex:2.0.1'
 }
 
 flutter {
