@@ -62,9 +62,11 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
           OptionItem(
             iconData: _isLooping ? Icons.repeat_one : Icons.repeat,
             title: "تكرار الفيديو",
-            onTap: (BuildContext context) async {
-              _isLooping = !_isLooping;
-              await _videoPlayerController.setLooping(_isLooping);
+            onTap: () {
+              setState(() {
+                _isLooping = !_isLooping;
+              });
+              _videoPlayerController.setLooping(_isLooping);
               if (_isLooping == true) {
                 Fluttertoast.showToast(msg: "تم تشغيل تكرار الفيديو");
               } else {
@@ -109,16 +111,16 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
                   Expanded(
                     child: SingleChildScrollView(
                       child: Container(
-                        padding: EdgeInsets.all(12),
+                        padding: const EdgeInsets.all(12),
                         child: Column(
-                          spacing: 12,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
+                            const Text(
                                 "هل هو فيديو تعليمي، ترفيهي، إعلاني، أو شيء آخر",
                                 style: TextStyle(
                                     fontSize: 16, fontWeight: FontWeight.bold)),
-                            Text(
+                            const SizedBox(height: 12),
+                            const Text(
                                 "في هذا الفيديو التعليمي، سنأخذك في رحلة شيقة لتعلم من الصفر حتى الاحتراف. سواء كنت مبتدئًا أو لديك بعض الخبرة، ستجد في هذا الدليل خطوات واضحة ونصائح عملية تساعدك على فهم [الموضوع] بسهولة."),
                           ],
                         ),

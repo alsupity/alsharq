@@ -6,7 +6,7 @@ publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.6.1
+  sdk: '>=3.3.4 <4.0.0'
 
 dependencies:
   flutter:
@@ -17,43 +17,43 @@ dependencies:
 
   cupertino_icons: ^1.0.8
 
-  awesome_notifications: ^0.10.0
-  firebase_messaging: ^15.2.1
+  awesome_notifications: ^0.7.4+1
+  firebase_messaging: ^14.6.8
   get: ^4.6.6
   get_storage: ^2.1.1
-  dio: ^5.7.0
-  sqflite: ^2.4.1
-  share_plus: ^10.1.4
-  awesome_dialog: ^3.2.1
-  jiffy: ^6.3.2
-  url_launcher: ^6.3.1
-  fluttertoast: ^8.2.10
-  lottie: ^3.3.1
-  confetti: ^0.8.0
-  introduction_screen: ^3.1.14
-  country_codes: ^3.2.0+1
-  country_icons: ^3.0.0
-  flutter_svg: ^2.0.17
-  audioplayers: ^6.1.0
-  video_player: ^2.9.2
-  chewie: ^1.10.0
-  loading_overlay: ^0.4.2
+  dio: ^5.3.3
+  sqflite: ^2.2.8+4
+  share_plus: ^7.2.1
+  awesome_dialog: ^3.1.0
+  jiffy: ^6.2.1
+  url_launcher: ^6.1.14
+  fluttertoast: ^8.2.4
+  lottie: ^2.6.0
+  confetti: ^0.7.0
+  introduction_screen: ^3.1.12
+  country_codes: ^2.2.0
+  country_icons: ^2.0.0
+  flutter_svg: ^1.1.6
+  audioplayers: ^5.2.1
+  video_player: ^2.7.2
+  chewie: 1.7.1
+  loading_overlay: ^0.3.0
 
-  flutter_animate: ^4.5.2
+  flutter_animate: ^4.2.0
   flutter_rating_bar: ^4.0.1
-  percent_indicator: ^4.2.4
-  cached_network_image: ^3.4.1
-  swipe_image_gallery: ^0.10.1
+  percent_indicator: ^4.2.3
+  cached_network_image: ^3.2.3
+  swipe_image_gallery: ^0.8.0
 
   flick_video_player: ^0.9.0
-  syncfusion_flutter_pdfviewer: ^28.2.9
-  flutter_cache_manager: ^3.4.1
+  syncfusion_flutter_pdfviewer: ^22.2.12
+  flutter_cache_manager: ^3.3.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_lints: ^5.0.0
+  flutter_lints: ^2.0.0
 
 #  flutter_native_splash:
 #flutter_native_splash:

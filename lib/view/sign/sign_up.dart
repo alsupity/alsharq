@@ -39,7 +39,7 @@ class _SignUpState extends State<SignUp> {
           padding: EdgeInsets.all(16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            spacing: 16,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               const SizedBox(height: 16),
               TextFormField(
@@ -47,6 +47,7 @@ class _SignUpState extends State<SignUp> {
                 decoration: const InputDecoration(labelText: "الاسم"),
                 validator: (value) => value!.isEmpty ? "الاسم مطلوب" : null,
               ),
+              const SizedBox(height: 16),
               TextFormField(
                 controller: _phoneController,
                 decoration: const InputDecoration(labelText: "رقم الهاتف"),
@@ -54,12 +55,14 @@ class _SignUpState extends State<SignUp> {
                 validator: (value) =>
                     value!.isEmpty ? "رقم الهاتف مطلوب" : null,
               ),
+              const SizedBox(height: 16),
               TextFormField(
                 controller: _emailController,
                 decoration: const InputDecoration(
                     labelText: "البريد الإلكتروني (اختياري)"),
                 keyboardType: TextInputType.emailAddress,
               ),
+              const SizedBox(height: 16),
               TextFormField(
                 controller: _passwordController,
                 decoration: const InputDecoration(labelText: "كلمة السر"),
@@ -68,6 +71,7 @@ class _SignUpState extends State<SignUp> {
                     ? "كلمة السر يجب أن تكون 6 أحرف على الأقل"
                     : null,
               ),
+              const SizedBox(height: 16),
               TextFormField(
                 controller: _confirmPasswordController,
                 decoration: const InputDecoration(labelText: "تأكيد كلمة السر"),
@@ -76,6 +80,7 @@ class _SignUpState extends State<SignUp> {
                     ? "كلمة السر غير متطابقة"
                     : null,
               ),
+              const SizedBox(height: 16),
               Row(
                 children: [
                   Expanded(
@@ -104,6 +109,7 @@ class _SignUpState extends State<SignUp> {
                   // ),
                 ],
               ),
+              const SizedBox(height: 16),
               GetBuilder<SingUpController>(builder: (controller) {
                 return ElevatedButton(
                   onPressed: (controller.loading)
@@ -138,6 +144,7 @@ class _SignUpState extends State<SignUp> {
                   ),
                 );
               }),
+              const SizedBox(height: 16),
               Container(
                 width: w,
                 alignment: Alignment.center,
