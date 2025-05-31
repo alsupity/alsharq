@@ -35,7 +35,7 @@ class _SignInState extends State<SignIn> {
           padding: const EdgeInsets.all(16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
-            spacing: 16,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               const SizedBox(height: 16),
               TextFormField(
@@ -51,6 +51,7 @@ class _SignInState extends State<SignIn> {
                   return null;
                 },
               ),
+              const SizedBox(height: 16),
               TextFormField(
                 controller: _passwordController,
                 obscureText: true,
@@ -65,37 +66,38 @@ class _SignInState extends State<SignIn> {
                 },
               ),
               const SizedBox(height: 16),
-              GetBuilder<SignInController>(
-                builder: (controller) {
-                  return ElevatedButton(
-                    onPressed: (controller.loading)? null: () async {
-                      if (_formKey.currentState!.validate()) {
-                        final Map<String, dynamic>? user =
-                            await singInController.postServerData(params: {
-                          "email": _emailOrPhoneController.text,
-                          "password": _passwordController.text,
-                        });
-                        if (user != null) {
-                          GetStorage().write("user", user);
-                          Get.back();
-                        }
-                      }
-                    },
-                    child: Container(
-                      width: w,
-                      height: 60,
-                      alignment: Alignment.center,
-                      child: Text(
-                        "تسجيل الدخول",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 18,
-                        ),
+              GetBuilder<SignInController>(builder: (controller) {
+                return ElevatedButton(
+                  onPressed: (controller.loading)
+                      ? null
+                      : () async {
+                          if (_formKey.currentState!.validate()) {
+                            final Map<String, dynamic>? user =
+                                await singInController.postServerData(params: {
+                              "email": _emailOrPhoneController.text,
+                              "password": _passwordController.text,
+                            });
+                            if (user != null) {
+                              GetStorage().write("user", user);
+                              Get.back();
+                            }
+                          }
+                        },
+                  child: Container(
+                    width: w,
+                    height: 60,
+                    alignment: Alignment.center,
+                    child: Text(
+                      "تسجيل الدخول",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 18,
                       ),
                     ),
-                  );
-                }
-              ),
+                  ),
+                );
+              }),
+              const SizedBox(height: 16),
               Container(
                 width: w,
                 alignment: Alignment.center,
